@@ -6,6 +6,8 @@ export const getProducts = () =>{
         return response.json()
     })
     .catch(err => console.log(err))
+
+    
 }
 
 

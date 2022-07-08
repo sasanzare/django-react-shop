@@ -2,11 +2,12 @@ import React from "react";
 
 const ImageHelper = ({product}) => {
     const Imageurl = product ? product.image
-    : `https://www.puratos.ng/en/recipes/lemon-meringue-muffin`
+    : `https://sasanzare.ir/img/about2.jpg`
+    
     return (
         <div className="rounded border border-success p-2">
             <img
-            src="{imageurl}"
+            src={Imageurl}
             style={{maxHeight:"100%", maxWidth:"100%"}}
             className="mb-3 rounded"
             alt=""
@@ -14,3 +15,4 @@ const ImageHelper = ({product}) => {
         </div>
     )
 }
+export default ImageHelper;
