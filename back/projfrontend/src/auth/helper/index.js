@@ -18,17 +18,27 @@ export const signup = user =>{
 };
 
 export const signin = (user) => {
-    const formdata = new FormData();
+    const formData = new FormData();
 
     for (const name in user) {
-        formdata.append(name,user[name]);
+        formData.append(name,user[name]);
     }
 
+    // const {email, password} = user ;
+    // const formData = new FormData();
+    // formData.append('email', email)
+    // formData.append('password', password)
+
+    for(var key of formData.keys()){
+        console.log('MY KEY: ',key)
+    }
+ 
     return fetch(`${API}user/login/`, {
         method:"POST",
-        body:"FormData",
+        body: formData,
     })
     .then((Response) => {
+        console.log("success", Response)
         return Response.json();
     })
     .catch((err) => console.log(err));
@@ -55,7 +65,9 @@ export const isAuthenticated = () => {
 };
 
 export const signout = next => {
-    const userId = isAuthenticated() && isAuthenticated.user.user.id
+    const userId = isAuthenticated() && isAuthenticated.user.user.id;
+
+    console.log("USERID", userId)
 
     if (typeof window !== undefined) {
         localStorage.removeItem("jwt")
