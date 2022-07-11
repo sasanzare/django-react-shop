@@ -157,4 +157,4 @@ dmypy.json
 .prof
 
 
-# */migrations/* 
+*/migrations/* 
