@@ -2,7 +2,7 @@ from rest_framework import viewsets
 
 from .serializers import CategorySerializer
 from .models import Category
-from api.category import serializers
+from . import serializers
 
 # Create your views here.
 

@@ -5,9 +5,8 @@ from . import views
 
 
 router = routers.DefaultRouter()
-router.register(r'', views.OrderViewset)
+router.register(r'', views.CategoryViewset)
 
 urlpatterns = [
-    path('add/<str:id>/<str:token>/', views.add, name='order.add'),
-    path('', include(router.urls))
+    # path('', include(router.urls))
 ]

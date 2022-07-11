@@ -2,4 +2,4 @@ from django.http import JsonResponse
 
 # Create your views here.
 def home(request):
-    return JsonResponse({'info': 'Django React cours', 'name':"sina"})
+    return JsonResponse({'info': 'Django React cours', 'name':"sasan zare"})
